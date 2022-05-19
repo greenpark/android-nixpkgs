@@ -42,7 +42,7 @@ let
         stdenv.cc
       ];
 
-      patches = lib.optional (lib.versionOlder package.version "21")
+      patches = lib.optional (lib.versionOlder package.version "19")
         ./make_standalone_toolchain.py_18.patch;
 
       postInstall = ''
